@@ -1,5 +1,5 @@
 Boxboat Bootcamp Labs
-#####################
+=====================
 
 Lab 1.1: Running Your First Docker Container
 --------------------------------------------
