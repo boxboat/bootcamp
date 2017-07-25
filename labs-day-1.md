@@ -118,8 +118,8 @@ Publishing Ports:
 Run Nginx and let Docker choose a high port  
 `docker container run -d -p 80 --name nginx-high nginx`  
 
-Run Nginx and choose the high port 
-`docker container run -d -p 808080 --name nginx-user nginx`  
+Run Nginx and choose the high port  
+`docker container run -d -p 8080:80 --name nginx-user nginx`  
 
 
 For communication within the network, use the exposed port  
