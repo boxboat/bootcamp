@@ -110,38 +110,45 @@ Lab 2.3: Exposing and Publishing Ports
 
 In this lab, we will learn about exposing and publishing ports
 
-Exposing Ports:
-Run Nginx without any port mapping
-`docker container ls`
+Exposing Ports:  
+Run Nginx without any port mapping  
+`docker container run -d --name nginx-exposed nginx`  
 
-Publishing Ports:
-Run Nginx and let Docker choose a high port
-Run Nginx and choose the high port
+Publishing Ports:  
+Run Nginx and let Docker choose a high port  
+`docker container run -d -p 80 --name nginx-high nginx`  
 
-For communication within the network, use the exposed port
-For communication external to the network, use the published port
+Run Nginx and choose the high port 
+`docker container run -d -p 808080 --name nginx-user nginx`  
+
+
+For communication within the network, use the exposed port  
+For communication external to the network, use the published port  
 
 Lab 3.1: Dockerfiles
 --------------------
 
-In this lab, we will show how Multi-Stage Builds can reduce application size
+Lab 3.2: Multi-Stage Builds
+---------------------------
 
-Go to to multi-stage-builds directory
-In here, we have 2 subdirectories, small and large
-Each subdirectory contains a dockerfile, let's build them and compare
+In this lab, we will show how Multi-Stage Builds can reduce application size  
+
+Go to to multi-stage-builds directory  
+In here, we have 2 subdirectories, small and large  
+Each subdirectory contains a dockerfile, let's build them and compare  
 
 Lab 4.1: WordPress
 ------------------
 
-In this lab, we will launch the WordPress application.
-It contains 2 components: front-end (PHP) and backend (database)
+In this lab, we will launch the WordPress application.  
+It contains 2 components: front-end (PHP) and backend (database)  
 
-First, we'll create the proper network: 
-	wordpress-net
+First, we'll create the proper network:  
+	wordpress-net  
 
-Next, we will create 2 volumes:
-	db-data
-	wordpress-data
+Next, we will create 2 volumes:  
+	db-data  
+	wordpress-data  
 
 Next, we will launch the database container	
 Create a docker container run command with the following configuration:
