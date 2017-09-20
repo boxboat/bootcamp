@@ -33,10 +33,10 @@ docker container ls
 docker rm $(docker kill nginx)
 ```
 
-Lab 1.3: Run Your Second Docker Container
+Lab 1.3: Pull Files from NGINX
 -----------------------------------------
 
-In this lab, we will run Nginx and try to view the content in another container
+In this lab, we will run NGINX and try to view the content in another container
 
 `docker container run -d -p "8080:80" --name nginx --network test nginx`
 
@@ -104,14 +104,16 @@ docker network inspect test
 ```
 
 Put 2 containers on the same bridge network so they can communicate via DNS
+Remember the `--network` CLI option
 
 Lab 2.3: Exposing and Publishing Ports
 --------------------------------------
 
 In this lab, we will learn about exposing and publishing ports
+After you run each container, look at how the ports are exposed
 
 Exposing Ports:  
-Run Nginx without any port mapping  
+Run NGINX without any port mapping  
 `docker container run -d --name nginx-exposed nginx`  
 
 Publishing Ports:  
@@ -120,7 +122,6 @@ Run Nginx and let Docker choose a high port
 
 Run Nginx and choose the high port  
 `docker container run -d -p 8080:80 --name nginx-user nginx`  
-
 
 For communication within the network, use the exposed port  
 For communication external to the network, use the published port  
