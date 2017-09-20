@@ -125,10 +125,7 @@ Run Nginx and choose the high port
 For communication within the network, use the exposed port  
 For communication external to the network, use the published port  
 
-Lab 3.1: Dockerfiles
---------------------
-
-Lab 3.2: Multi-Stage Builds
+Lab 3.1: Multi-Stage Builds
 ---------------------------
 
 In this lab, we will show how Multi-Stage Builds can reduce application size  
