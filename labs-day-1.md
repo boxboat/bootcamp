@@ -126,6 +126,28 @@ Run Nginx and choose the high port
 For communication within the network, use the exposed port  
 For communication external to the network, use the published port  
 
+Lab 3.1: Build a Simple Python App
+----------------------------------
+
+In this lab, we will build a very simple python application
+
+Go to cd bootcamp/simple-python-app
+
+Now, execute the following to build the Docker Image
+
+`docker build –t python-app:latest .`
+
+Where did our image go?
+
+`docker image ls`
+
+Where is it actually stored on the host?
+
+```
+ls /var/lib/docker/image/overlay2/imagedb/content/sha256/`
+ls /var/lib/docker/image/overlay2/layerdb/sha256/
+````
+
 Lab 3.1: Multi-Stage Builds
 ---------------------------
 
