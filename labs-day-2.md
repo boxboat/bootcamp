@@ -34,18 +34,18 @@ Database container
 	network: wordpress-net  
 	environment variables:  
 		MYSQL_ROOT_PASSWORD: wordpress
-      	MYSQL_DATABASE: wordpress
-      	MYSQL_USER: wordpress
-      	MYSQL_PASSWORD: wordpress
+      	        MYSQL_DATABASE: wordpress
+      	        MYSQL_USER: wordpress
+      	        MYSQL_PASSWORD: wordpress
 
 WordPress container
 	service name: wordpress
 	depends on: db
-	image: wordpres:latest
+	image: wordpress:latest
 	volumes: wordpress-data:/var/www/html
 	network: wordpress-net
 	ports: 8001:80
 	environment variables:
 		WORDPRESS_DB_HOST: db:3306
-      	WORDPRESS_DB_PASSWORD: wordpress
+      	        WORDPRESS_DB_PASSWORD: wordpress
 ```
